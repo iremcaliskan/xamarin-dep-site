@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             xmlns:local="clr-namespace:App13"  
+             x:Class="App13.HomePage" Title="Home Page">
+
+    <ContentPage Title="Hakkında">
+            <ContentPage.Content>
+            <Grid x:Name="hakkındaGrid" RowSpacing="2" ColumnSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="estu.jpg" Grid.Row="0"/>
+
+                <Label Text="  18 Mayıs 2018 tarih ve 30425 sayılı Resmî Gazete'de yayımlanan 7141 sayılı Kanun ile kurulan Eskişehir Teknik Üniversitesi, bilim, kültür ve aynı zamanda  bir gençlik kenti olan Eskişehir'in merkezinde yer alan 2 yerleşkede 5 Fakülte, 2 Meslek Yüksekokulu ve 3 Enstitü'den oluşmaktadır."
+                      Grid.Row="1" FontAttributes="Italic" FontSize="Small" />
+                <Label Grid.Row="2" FontAttributes="Bold" FontSize="Small" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Daha fazla bilgi için: " />
+                            <Span Text="Tıklayınız." TextColor="BlueViolet"                                
+                                  TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                      CommandParameter="https://www.eskisehir.edu.tr/universitemiz/kurumsal/hakkinda"
+                                           Tapped="HandleTapped"               
+                                           NumberOfTapsRequired="2"/>
+                            </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </Grid>
+        </ContentPage.Content>
+        </ContentPage>
+
+    <ContentPage Title="Kişiler">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout Padding="20">
+                    <Label HorizontalTextAlignment="Center"
+                       Text="Kişiler"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                </StackLayout>
+                <StackLayout>
+                    <ListView x:Name="listHocalar" ItemsSource="{Binding .}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ScrollView>
+                                        <StackLayout Margin="0,20,0,0" Orientation="Horizontal">
+                                            <Grid HorizontalOptions="FillAndExpand">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Image Margin="20,0,0,0"  Source="{Binding ImageFoto}"
+                                                       Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Aspect="AspectFit" HeightRequest="120">
+                                                </Image>
+
+                                                <Label Text="{Binding HocaAdı}"
+                                                   TextColor="Black"
+                                                   Grid.Column="1"
+                                                   Grid.Row="1"/>
+                                                <Label Text="{Binding mail}"
+                                                   TextColor="Black"
+                                                   Grid.Column="1"
+                                                   Grid.Row="2"/>
+                                                <Label Text="{Binding telefon}"
+                                                   TextColor="Black"
+                                                   Grid.Column="1"
+                                                   Grid.Row="3"/>
+                                                <Button Text="Call" Grid.Column="1"
+                                                   Grid.Row="3" BackgroundColor="Gray" TextColor="Black" VerticalOptions="Center" HorizontalOptions="End"/>
+
+                                            </Grid>
+                                        </StackLayout>
+                                    </ScrollView>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="AltYapı">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout Padding="20">
+                    <Label HorizontalTextAlignment="Center"
+                       Text="Derslikler"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                </StackLayout>
+                <StackLayout>
+                    <ListView x:Name="listDerslik" ItemsSource="{Binding .}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ScrollView>
+                                        <StackLayout Margin="0,20,0,0" Orientation="Horizontal">
+                                            <Grid HorizontalOptions="FillAndExpand">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2*" />
+                                                    <ColumnDefinition Width="8*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Image Margin="20,0,0,0"  Source="{Binding ImageUrl}"
+                                                       Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Aspect="AspectFit" HeightRequest="120">
+                                                    
+                                                </Image>
+
+                                                <Label Text="{Binding DerslikAdı}"
+                                                   TextColor="Black"
+                                                   Grid.Column="0"/>
+                                                <Label Text="{Binding Kapasite}"
+                                                   TextColor="Black"
+                                                   Grid.Column="1"/>
+
+                                            </Grid>
+                                        </StackLayout>
+                                    </ScrollView>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+        
+        
+<ContentPage Title="Dersler">
+
+    <ContentPage.Content>
+            <StackLayout>
+                <StackLayout Padding="20">
+                    <Label HorizontalTextAlignment="Center"
+                       Text="Bu Dönem Yürütülen Lisans ve Lisansüstü Ders Bilgileri"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <ListView x:Name="listDersler" ItemsSource="{Binding .}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Text="{Binding DersKodu}"
+                                                   TextColor="Black"
+                                                   Grid.Column="0"/>
+                                                <Label Text="{Binding DersAdı}"
+                                                   TextColor="Black"
+                                                   Grid.Column="1"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    
+</ContentPage>
+
+
+</TabbedPage>

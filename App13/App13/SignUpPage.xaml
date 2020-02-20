@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App13.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" >
+            <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Register" 
+                          BackgroundColor="DarkSeaGreen"
+                          TextColor="White" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+            <StackLayout Orientation="Horizontal" Padding="20,40,20,0">
+                <Entry HeightRequest="50" 
+                         HorizontalOptions="FillAndExpand"
+                         Placeholder="Name">
+                </Entry>
+
+                <Entry HeightRequest="50" 
+                                  HorizontalOptions="FillAndExpand"
+                                 Placeholder="Last Name">
+
+                </Entry>
+            </StackLayout>
+
+            <Entry  Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="Email">
+
+            </Entry>
+
+            <Entry Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Password">
+
+            </Entry>
+
+            <Button Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                         Text="Register"  Clicked="Handle_Clicked"
+                         BackgroundColor="Gray"
+                         HorizontalOptions="FillAndExpand"/>
+
+            <Button
+                         Text="I have account" 
+                         Margin="0,10,0,20"
+                         TextColor="CadetBlue"
+                         HorizontalOptions="Center"
+                         Clicked="Handle_Clicked">
+
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

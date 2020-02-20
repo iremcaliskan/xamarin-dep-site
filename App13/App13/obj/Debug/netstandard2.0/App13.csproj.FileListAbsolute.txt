@@ -1,0 +1,14 @@
+C:\Users\ASUS\source\repos\App13\App13\bin\Debug\netstandard2.0\App13.deps.json
+C:\Users\ASUS\source\repos\App13\App13\bin\Debug\netstandard2.0\App13.dll
+C:\Users\ASUS\source\repos\App13\App13\bin\Debug\netstandard2.0\ref\App13.dll
+C:\Users\ASUS\source\repos\App13\App13\bin\Debug\netstandard2.0\App13.pdb
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\SignUpPage.xaml.g.cs
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\App13.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\App13.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\App13.dll
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\ref\App13.dll
+C:\Users\ASUS\source\repos\App13\App13\obj\Debug\netstandard2.0\App13.pdb

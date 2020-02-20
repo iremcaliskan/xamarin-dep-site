@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"             
+             xmlns:local="clr-namespace:App13"  
+             x:Class="App13.MainPage"
+             BackgroundColor="WhiteSmoke" Title="Login Page">
+
+    <StackLayout x:Name="MainStack">
+        <StackLayout Padding="20" Margin="0,80,0,0">
+            <Label Text="UserName" TextColor="CadetBlue"/>
+            <Entry Text="" Placeholder="UserName" x:Name="UserNameEntry"/>
+            <Label Text="Password" TextColor="CadetBlue"/>
+            <Entry Text="" Placeholder="Password" IsPassword="True"/>
+            <Button Text="Login" BackgroundColor="DarkGray"  TextColor="Black" Clicked="Button_Clicked"></Button>
+            <Button TextColor="White" 
+                    Text="Not a Member? Sign Up Now"  Clicked="Handle_Clicked"
+                    BackgroundColor="CadetBlue"  />
+
+            <Label
+    Text="Forgot password" 
+    TextColor="CadetBlue"
+    HorizontalOptions="CenterAndExpand" 
+    VerticalOptions="CenterAndExpand" >
+            </Label>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>  
